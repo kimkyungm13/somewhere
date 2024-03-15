@@ -150,9 +150,10 @@
 .sc-withus {
     position: relative;
     height: 827px;
-    margin-top: 171px;
+    margin-top: 94px;
     background: #000;
     z-index: 2;
+    margin-bottom: 94px;
 }
 
 .sc-withus .at {
@@ -217,8 +218,39 @@
     font-size: 22px;
 }
 
-.sc-signup {}
+.sc-signup {
+    padding: 85px 93px;
+    background: #191f2a;
+}
 
-.sc-signup .form-wrap {}
+.sc-signup .form-wrap {
+    display: flex;
+}
 
-.sc-signup .form-wrap p {}
+.sc-signup .form-wrap>* {
+    width: 50%;
+}
+
+.sc-signup .form-wrap .register {
+    display: flex;
+    flex-direction: column;
+}
+
+.sc-signup .form-wrap .register>* {
+    flex-shrink: 0;
+}
+
+.sc-signup .form-wrap .register p.receive {
+    color: #808389;
+    font-size: 11px;
+}
+
+.sc-signup .form-wrap .register .btn {
+    padding-top: 10px;
+}
+
+.sc-signup .form-wrap p.text {
+    font-family: var(--ivypresto);
+    color: #fff;
+    font-size: 36px;
+}
