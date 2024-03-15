@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--  gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <!--remix con-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="/assets/js/common.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <button class="btn-menu">MENU</button>
+            <h1 class="logo">
+                <a class="siteHeader__logo" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="275.213" height="59" viewBox="0 0 275.213 59">
+                        <g transform="translate(-0.305 11)">
+                            <rect width="275.21" height="59" transform="translate(0.305 -11)" fill="none"></rect>
+                            <path
+                                d="M.329,21.384H4.67c.355,4.99,3.176,8.117,8.081,8.166,3.862,0,6.278-1.852,6.315-5.273,0-3.421-2.7-4.819-8.558-7.395-5.518-2.452-9.05-4.463-9.05-9.122C1.458,2.771,5.676,0,11.3,0c5.91,0,10.5,3.139,11.452,8.841h-4.3c-.527-4.022-3.139-6.756-7.283-6.756-3.777,0-5.714,1.729-5.714,4.586,0,3.213,2.771,4.549,7.639,6.719,6,2.7,9.932,4.623,9.932,9.772s-4.3,8.448-10.374,8.448C5.945,31.61,1.028,27.993.305,21.4Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M139.906,19.855c0-10.582,9.368-19.668,20.465-19.668,7.921,0,12.74,4.586,12.74,11.82,0,10.655-9.368,19.741-20.379,19.741-7.8,0-12.826-4.586-12.826-11.906Zm13.144,9.809c8.2,0,15.438-8.644,15.438-18.208,0-5.628-3.053-9.123-8.485-9.123-8.24,0-15.437,8.608-15.437,18.172,0,5.591,3.017,9.172,8.485,9.172Z"
+                                transform="translate(-112.074 -0.15)" fill="currentColor"></path>
+                            <path
+                                d="M327.989,7.125v20.55c0,2.857.2,4.267,1.888,5.223v.16H323.6V32.9c1.606-.969,1.851-2.366,1.851-5.223V8.007c0-3.017-.245-4.267-1.766-5.273V2.612h6.792l10.055,24.449,9.846-24.437H357.1v.123C355.565,3.753,355.368,5,355.368,8.02V27.688c0,2.857.245,4.267,1.766,5.223v.159h-7.957v-.159c1.606-.969,1.852-2.366,1.852-5.223V6.842L340.214,33.413h-1.251l-10.974-26.3Z"
+                                transform="translate(-259.546 -2.097)" fill="currentColor"></path>
+                            <path
+                                d="M522.02,32.9c1.569-.969,1.766-2.366,1.766-5.223V8.007c0-3.017-.2-4.267-1.766-5.273V2.612h19.668V6.229c-4.341-1.079-7.075-1.643-9.491-1.643h-3.9V16.124h2.416c2.293,0,5.628-.2,8.926-.442V18.54a86.575,86.575,0,0,0-8.926-.441H528.3V31.047h4.623a33.7,33.7,0,0,0,9.527-1.852v3.862H522.02Z"
+                                transform="translate(-418.84 -2.097)" fill="currentColor"></path>
+                            <path
+                                d="M635.14,2.735V2.612h8.081v.123c-1.41.687-1.373,1.888-.724,3.936l6,19.9,6.56-22.6H657.7l6.756,22.757,6-20.06c.638-2.17.638-3.335-.808-3.936V2.612h6.033v.123c-1.079.564-1.8,1.766-2.452,3.936l-7.48,24.082a11.06,11.06,0,0,0-.4,2.293h-3.1l-6.793-22.562-6.033,20.343a9.14,9.14,0,0,0-.4,2.207h-2.98l-8.362-26.3c-.724-2.134-1.373-3.3-2.538-4.023Z"
+                                transform="translate(-509.644 -2.097)" fill="currentColor"></path>
+                            <path
+                                d="M857.682,32.9c1.569-.969,1.766-2.366,1.766-5.223V8.007c0-3.017-.2-4.267-1.766-5.273V2.612h8.044v.123c-1.57,1.006-1.766,2.256-1.766,5.273v8.2H878.6v-8.2c0-3.017-.2-4.267-1.766-5.273V2.612h8.043v.123c-1.569,1.006-1.766,2.256-1.766,5.273V27.675c0,2.857.2,4.267,1.766,5.223v.16h-8.043V32.9c1.57-.969,1.766-2.366,1.766-5.223v-9.4H863.96v9.4c0,2.857.2,4.267,1.766,5.223v.16h-8.044Z"
+                                transform="translate(-688.314 -2.097)" fill="currentColor"></path>
+                            <path
+                                d="M1024.222,32.9c1.57-.969,1.767-2.366,1.767-5.223V8.007c0-3.017-.2-4.267-1.767-5.273V2.612h19.656V6.229c-4.34-1.079-7.075-1.643-9.491-1.643h-3.9V16.124h2.416c2.291,0,5.628-.2,8.927-.442V18.54a86.608,86.608,0,0,0-8.927-.441h-2.416V31.047h4.622a33.632,33.632,0,0,0,9.528-1.852v3.862H1024.21V32.9Z"
+                                transform="translate(-822.004 -2.097)" fill="currentColor"></path>
+                            <path
+                                d="M1150.07,32.9c1.57-.969,1.765-2.366,1.765-5.223V8.007c0-3.017-.2-4.267-1.765-5.273V2.612h10.9c6.878,0,11.464,2.134,11.464,7.48,0,4.745-3.618,7.234-8.682,7.835l10.938,14.837v.282h-5.224l-9.895-14.751h-3.212v9.368c0,2.857.2,4.267,1.814,5.223v.16h-8.081v-.16Zm9.526-16.565c5.028,0,8.363-1.729,8.363-6.155,0-4.1-3.052-5.591-7.761-5.591h-3.863V16.333Z"
+                                transform="translate(-923.046 -2.097)" fill="currentColor"></path>
+                            <path
+                                d="M1292.4,32.9c1.57-.969,1.767-2.366,1.767-5.223V8.007c0-3.017-.2-4.267-1.767-5.273V2.612h19.667V6.229c-4.34-1.079-7.075-1.643-9.491-1.643h-3.9V16.124h2.416c2.293,0,5.628-.2,8.927-.442V18.54a86.578,86.578,0,0,0-8.927-.442h-2.416V31.047h4.622a33.693,33.693,0,0,0,9.528-1.852v3.862H1292.4Z"
+                                transform="translate(-1037.311 -2.097)" fill="currentColor"></path>
+                            <path
+                                d="M581,218.061c0,1.016-.8,1.552-2.089,1.552H575v-5.649h3.69c1.2,0,2,.513,2,1.439a1.205,1.205,0,0,1-1.183,1.28c.851.056,1.5.456,1.5,1.384Zm-5.09-1.72h2.623c.735,0,1.223-.168,1.223-.792s-.495-.784-1.223-.784h-2.623Zm4.131,1.624c0-.64-.5-.84-1.307-.84h-2.816v1.68h2.816C579.556,218.8,580.044,218.6,580.044,217.965Z"
+                                transform="translate(-461.373 -171.773)" fill="currentColor"></path>
+                            <path
+                                d="M615.478,213.923l2.081,2.865,2.065-2.865H620.7l-2.685,3.7v1.952h-.936V217.62l-2.692-3.7h1.091Z"
+                                transform="translate(-492.993 -171.74)" fill="currentColor"></path>
+                            <path d="M683.394,213.923v5.649h-.828l-4.27-4.456v4.456h-.905v-5.649h1l4.092,4.289v-4.289Z"
+                                transform="translate(-543.574 -171.74)" fill="currentColor"></path>
+                            <path d="M724.117,219.572v-5.649h.936v5.649Z" transform="translate(-581.086 -171.74)"
+                                fill="currentColor">
+                            </path>
+                            <path
+                                d="M748.547,217.2l.866.44a3.28,3.28,0,0,1-2.893,1.416c-2.042,0-3.334-1.136-3.334-2.993s1.284-2.993,3.372-2.993a3.244,3.244,0,0,1,2.847,1.408l-.874.456a2.118,2.118,0,0,0-1.988-1c-1.447,0-2.406.728-2.406,2.137s.959,2.136,2.406,2.136a2.135,2.135,0,0,0,2-1Z"
+                                transform="translate(-596.395 -171.056)" fill="currentColor"></path>
+                            <path
+                                d="M786.064,216.064c0-1.864,1.292-2.993,3.4-2.993s3.4,1.128,3.4,2.993-1.292,2.993-3.4,2.993S786.064,217.928,786.064,216.064Zm5.833,0c0-1.376-.951-2.136-2.437-2.136s-2.445.769-2.445,2.136.951,2.137,2.445,2.137S791.9,217.432,791.9,216.064Z"
+                                transform="translate(-630.818 -171.056)" fill="currentColor"></path>
+                        </g>
+                    </svg>
+                </a>
+            </h1>
+            <a href="" class="btn-booking">MAKE A ABOOKING</a>
+        </header>
+        <main id="main">
+            <div class="visual">
+                <img src="/assets/images/home-hero.jpg" alt="">
+                <div class="text-wrap">
+                    <p>EVER CHANGING WORLDS AWAIT YOU</p>
+                    <p>WHICH ONE WILL YOU EXPLORE?</p>
+
+                    <a href="" class="btn-box">MAKE A BOOKING</a>
+                </div>
+            </div>
+            <div class="book">
+                <div class="txt-box">
+                    <span class="txt line01">Welcome to Somewhere.</span>
+                    <span class="txt line02">A cocktail bar and experience.</span>
+                    <span class="txt line03">A portal to the extraordinary.</span>
+                </div>
+
+                <a href="" class="btn-booknow">BOOK NOW</a>
+
+                EXPLORE OUR WORLDS
+            </div>
+            <section class="sc-booking inner">
+                <div class="wrapper">
+                    <div class="img-area">
+                        <img src="/assets/images/LOZ_Hero-image.jpg" alt="">
+                    </div>
+                    <div class="txt-area">
+                        <div class="txt-wrap">
+                            <h2>NOW BOOKING</h2>
+                            <img src="/assets/images/landofoz-icon.svg" alt="">
+                            LAND OF OZ
+                            GLASGOW
+                            20TH MARCH – 28TH APRIL 2024
+                            “Click your heels, open your eyes and find yourself in the technicolour land of Oz—a
+                            dreamworld of magic, mystery and
+                            adventure.”
+                            <a href="" class="btn btn-gold">EXPLORE</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-connect">
+                <h2>CONNECT</h2>
+                <ul class="sns-list">
+                    <li class="ins"><a href=""><i class="ri-instagram-line"></i><span class="blind">인스타그램</span></a>
+                    </li>
+                    <li class="tic"><a href=""><i class="ri-tiktok-fill"></i><span class="blind">틱톡</span></a></li>
+                    <li class="fb"><a href=""><i class="ri-facebook-line"></i><span class="blind">페이스북</span></a></li>
+                </ul>
+            </section>
+            <section class="sc-escape inner">
+                <img src="/assets/images/escape-hero-image.jpg" alt="">
+                <h2>escape</h2>
+                <a href="" class="btn btn-gold">TREAT SOMEONE</a>
+            </section>
+            <section class="sc-about inner">
+                <div class="conts-wrap">
+                    <div class="conts top">
+                        <div class="txt-area">
+                            <h2>ABOUT SOMEWHERE</h2>
+                            <span class="line01">Explore new worlds.</span>
+                            <span class="line02">Escape reality.</span>
+                            <span class="line03">Encounter a cocktail bar like no other.</span>
+                        </div>
+                        <div class="img-area">
+                            <img src="/assets/images/Somewhere-about-4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="conts bottom">
+                        <div class="img-area">
+                            <img src="/assets/images/Somewhere-about-5.jpg" alt="">
+                        </div>
+                        <div class="txt-area">
+                            <p>Somewhere is a conceptual cocktail bar by the award-winning team behind Six by Nico.
+                                Every
+                                six weeks, we open the
+                                portal
+                                to a new world—creating unforgettable experiences inspired by dreams, stories, memories
+                                and
+                                myths.<br>
+                                <br>
+                                You encounter each world through a six-course tasting menu: Curious concoctions arrive
+                                at
+                                your table with
+                                experimental
+                                food pairings, a splash of theatre and all manner of exhilarating twists. These
+                                marvellous
+                                worlds are open to
+                                all who
+                                seek to explore them, which is why we create non-alcoholic versions of each menu, with
+                                zero
+                                compromise on
+                                flavour and
+                                craft. Our mixologists, chefs and storytellers pore over the tiniest details — infusing
+                                creative magic into
+                                every sip,
+                                bite, sound and sight, to bring these fantasy realms to life.
+                            </p>
+                        </div>
+                        <div class="img-area">
+                            <img src="/assets/images/somewhere-gallery-7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-withus inner">
+                <img src="/assets/images/connect2.jpg" alt="">
+                <div class="txt-box">
+                    <span class="at">@SOMEWHEREBYNICO</span>
+                    <h2>CONNECT WITH US</h2>
+                    <ul class="sns-list">
+                        <li class="ins"><a href=""><i class="ri-instagram-line"></i><span class="blind">인스타그램</span></a>
+                        </li>
+                        <li class="tic"><a href=""><i class="ri-tiktok-fill"></i><span class="blind">틱톡</span></a></li>
+                        <li class="fb"><a href=""><i class="ri-facebook-line"></i><span class="blind">페이스북</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sc-signup">
+                <h2 class="blind">sign up</h2>
+                <div class="form-wrap">
+                    <p>Sign up to unlock new worlds before anyone else.</p>
+                    <div class="register">
+                        By subscribing to our newsletter, you agree to receive periodic emails from us.
+                        <a href="" class="btn btn-gold">REGISTER</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

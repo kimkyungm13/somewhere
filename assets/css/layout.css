@@ -1,0 +1,52 @@
+@import url(/assets/css/common.css);
+@import url(/assets/css/reset.css);
+@import url(/assets/css/vso5ccd.css);
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 26px 52px;
+}
+
+#header h1.logo {}
+
+#header h1.logo a {
+    display: block;
+    height: 41px;
+    color: var(--base-color);
+}
+
+#header h1.logo a svg {
+    height: 100%;
+}
+
+#header .btn-menu {
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    color: var(--base-color);
+}
+
+#header .btn-booking {
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 11px;
+    position: relative;
+    display: inline-block;
+    color: var(--base-color);
+    line-height: 2;
+}
