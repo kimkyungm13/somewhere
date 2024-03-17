@@ -11,10 +11,15 @@
     left: 0;
     top: 0;
     width: 100%;
-    padding: 26px 52px;
+    padding: 26px 43px;
 }
 
-#header h1.logo {}
+#header h1.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 #header h1.logo a {
     display: block;

@@ -6,6 +6,7 @@
 .visual {
     position: relative;
     height: 100vh;
+
 }
 
 .visual img {
@@ -17,6 +18,43 @@
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+.visual .text-wrap {
+    margin-bottom: 0px;
+    margin-left: 206.227px;
+    margin-right: 206.227px;
+    margin-top: 0px;
+    padding-bottom: 49.792px;
+    padding-top: 101.376px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visual .text-wrap .text-tit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.visual .text-wrap .text-tit span {
+    color: var(--base-color);
+    font-family: var(--frag);
+    font-size: 94px;
+}
+
+.visual .text-wrap .text-desc {
+    font-family: var(--term);
+    color: var(--base-color);
+    font-size: 13px;
+    margin-top: 50px;
+    letter-spacing: 2px
+}
+
+.visual .text-wrap .btn-gold {
+    margin-top: 37px;
 }
 
 .sc-booking {}
