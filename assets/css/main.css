@@ -3,49 +3,74 @@
     background: var(--base-color);
 }
 
-.visual {
+.sc-visual {
     position: relative;
     height: 100vh;
-
+    overflow: hidden;
+    --opacity: 1;
 }
 
-.visual img {
+.sc-visual:before {
+    content: "";
     position: absolute;
-    z-index: 0;
     left: 0;
+    right: 0;
     top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0);
+    opacity: var(--opacity);
+    z-index: 1;
+}
+
+.sc-visual .bg-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sc-visual .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
+    overflow: hidden;
+}
+
+.sc-visual img.visual-bg {
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
-.visual .text-wrap {
-    margin-bottom: 0px;
-    margin-left: 206.227px;
-    margin-right: 206.227px;
-    margin-top: 0px;
-    padding-bottom: 49.792px;
-    padding-top: 101.376px;
+.sc-visual .text-wrap {
+
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
-.visual .text-wrap .text-tit {
+.sc-visual .text-wrap .text-tit {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: 120px;
 }
 
-.visual .text-wrap .text-tit span {
+.sc-visual .text-wrap .text-tit span {
     color: var(--base-color);
     font-family: var(--frag);
-    font-size: 94px;
+    font-size: 114px;
+    line-height: 1.1;
 }
 
-.visual .text-wrap .text-desc {
+.sc-visual .text-wrap .text-desc {
     font-family: var(--term);
     color: var(--base-color);
     font-size: 13px;
@@ -53,8 +78,16 @@
     letter-spacing: 2px
 }
 
-.visual .text-wrap .btn-gold {
-    margin-top: 37px;
+.sc-visual .text-wrap .btn-gold {
+    margin-top: 56px;
+}
+
+.sc-visual .text-wrap img {
+    margin-top: 55px;
+}
+
+.sc-book {
+    padding: 210px 93px 120px 93px
 }
 
 .sc-booking {}
