@@ -5,7 +5,6 @@
 
 .sc-visual {
     position: relative;
-    height: 100vh;
     overflow: hidden;
     --opacity: 1;
 }
@@ -87,35 +86,87 @@
 }
 
 .sc-book {
-    padding: 210px 93px 120px 93px
-}
-
-.sc-booking {}
-
-.sc-booking .wrapper {
-    display: flex;
-}
-
-.sc-booking .wrapper .img-area {
-    flex: 1;
-}
-
-.sc-booking .wrapper .txt-area {
-
-    flex: 1;
-    background: #3d2e4f;
-    color: var(--base-color);
-    position: relative
-}
-
-.sc-booking .wrapper .txt-area .txt-wrap {
+    padding: 210px 93px 120px 93px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.sc-book .txt-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 77px;
+}
+
+.sc-book .txt-box span {
+    font-family: var(--ivypresto);
+    font-size: 77px;
+}
+
+.sc-now {}
+
+.sc-now .wrapper {
+    display: flex;
+}
+
+.sc-now .wrapper .img-area {
+    width: 50%;
+}
+
+.sc-now .wrapper .img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-now .wrapper .txt-area {
+    width: 50%;
+    background: #3d2e4f;
+    color: var(--base-color);
+    position: relative;
+}
+
+.sc-now .wrapper .txt-area .txt-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 85px 52px;
+    color: var(--base-color);
+    gap: 28px;
+    justify-content: center;
+}
+
+.sc-now .wrapper .txt-area .txt-wrap h2 {
+    font-family: var(--term);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+.sc-now .wrapper .txt-area .txt-wrap .tit {
+    font-family: var(--frag);
+    font-size: 77px;
+    color: var(--base-color);
+    margin-top: 28px;
+}
+
+.sc-now .wrapper .txt-area .txt-wrap .noti {
+    text-align: center;
+}
+
+.sc-now .wrapper .txt-area .txt-wrap .noti>* {
+    font-family: var(--term);
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.75;
+    letter-spacing: 0.15em;
+}
+
+.sc-now .wrapper .txt-area .txt-wrap .desc {
+    font-family: var(--ivypresto);
+    font-size: 25px;
+    text-align: center;
 }
 
 .sc-connect {
@@ -126,6 +177,13 @@
     gap: 13px;
     padding-bottom: 120px;
     padding-top: 209px
+}
+
+.sc-connect h2 {
+    font-family: var(--term);
+    font-size: 11px;
+    color: #000612;
+    letter-spacing: 0.15em;
 }
 
 .sc-connect .sns-list {
@@ -142,6 +200,7 @@
     justify-content: center;
     align-items: center;
     width: 70px;
+    height: 70px;
 }
 
 .sc-connect .sns-list li a i {
@@ -152,8 +211,14 @@
 
 .sc-escape {
     position: relative;
-    height: 100vh;
     overflow: hidden;
+    padding: 210px 93px 120px 93px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 919px;
+
 }
 
 .sc-escape h2 {
@@ -179,6 +244,32 @@
 
 .sc-about {
     margin-top: 210px;
+}
+
+.sc-about .txt-area {}
+
+.sc-about .txt-area h2 {
+    font-family: var(--term);
+    font-size: 11px;
+    letter-spacing: 0.15em
+}
+
+.sc-about .txt-area .txt-line {
+    font-size: 77px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 58px;
+}
+
+.sc-about .txt-area .txt-line span {
+    font-family: var(--ivypresto);
+}
+
+.sc-about .txt-area .desc {
+    font-size: 18px;
+    margin-left: 145px;
+    padding: 120px 14px 0;
+    line-height: 1.625;
 }
 
 .sc-about .conts-wrap {}

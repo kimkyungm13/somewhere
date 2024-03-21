@@ -21,21 +21,29 @@
 }
 
 .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--term);
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-size: 11px;
+    height: 56px;
+    padding: 0 60px;
 }
 
 .btn-gold {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+
     position: relative;
     color: var(--base-color);
     background: var(--btn-gold-bg);
-    height: 56px;
-    padding: 0 60px;
+}
+
+.btn-border {
+
+    position: relative;
+    border: 1px solid #000612;
+    color: #000612;
 }

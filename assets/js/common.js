@@ -6,11 +6,11 @@ $(function () {
         scrollTrigger: {
             trigger: ".sc-visual",
             start: "top top",
-            end: "100% 80%",
+            end: "bottom top",
             scrub: 1,
             markers: true
         }
     });
-    visual.to(".sc-visual", { height: 0 }, "a")
+    visual.to(".sc-visual", { height: '50vh' }, "a")
         .to(".text-wrap", { opacity: 0 }, "a")
 });
