@@ -67,6 +67,7 @@
     font-family: var(--frag);
     font-size: 114px;
     line-height: 1.1;
+    display: inline-block;
 }
 
 .sc-visual .text-wrap .text-desc {
@@ -117,7 +118,6 @@
 
 .sc-now .wrapper .img-area img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -237,8 +237,6 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -337,7 +335,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     object-fit: cover;
     overflow: hidden;
     z-index: 0;
@@ -396,6 +393,7 @@
 .sc-signup .form-wrap .register {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .sc-signup .form-wrap .register>* {
@@ -405,10 +403,30 @@
 .sc-signup .form-wrap .register p.receive {
     color: #808389;
     font-size: 11px;
+    padding: 10px 0;
+}
+
+.sc-signup .form-wrap .register fieldset {
+    width: 700px;
+    border: none;
+    padding-bottom: 10px;
+}
+
+.sc-signup .form-wrap .register .email-box {
+    border: 0;
+    width: 100%;
+    background: none;
+    color: var(--base-color);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--base-color)
+}
+
+.sc-signup .form-wrap .register .email-box:focus {
+    outline: none;
 }
 
 .sc-signup .form-wrap .register .btn {
-    padding-top: 10px;
+    margin-top: 10px;
 }
 
 .sc-signup .form-wrap p.text {

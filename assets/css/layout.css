@@ -56,3 +56,82 @@
     color: var(--base-color);
     line-height: 2;
 }
+
+#footer {
+    background: #000612;
+    color: var(--base-color)
+}
+
+#footer .inner {
+    padding: 80px 0 40px 0
+}
+
+#footer .inner .f-top {
+    display: flex;
+}
+
+#footer h2 {
+    font-size: 11px;
+    font-family: var(--term);
+    color: #808389;
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+}
+
+#footer .inner .f-top .btn-area {
+    width: 45.83333333%
+}
+
+#footer .inner .f-top section {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer .inner .f-top .sc-contact {
+    width: 20.83333333%
+}
+
+#footer .inner .f-top .sc-contact .mail {}
+
+#footer .inner .f-top .sc-contact .hiring {
+    margin-top: 16px;
+}
+
+#footer .inner .f-top .sc-glasgow {
+    width: 20.83333333%;
+    line-height: 2;
+}
+
+#footer .inner .f-top .sc-glasgow .info .time {}
+
+#footer .inner .f-top .sc-social {
+    width: 16.66666667%
+}
+
+#footer .inner .f-top .sc-social .list {}
+
+#footer .inner .f-logo {
+    margin: 157px 0 28px 0;
+}
+
+#footer .inner .f-logo svg {
+    width: 100%;
+    height: auto;
+}
+
+#footer .inner .f-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #808389
+}
+
+#footer .inner .f-bottom .link-list {
+    display: flex;
+    gap: 22px;
+}
+
+#footer .inner .f-bottom li {}
+
+#footer .inner .f-bottom li a {}
