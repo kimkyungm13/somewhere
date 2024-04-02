@@ -109,6 +109,42 @@
     font-size: 77px;
 }
 
+.marquee-wrap {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.marquee-wrap p {
+    font-family: "PPFragment-GlareLight", serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    overflow: hidden;
+    font-size: 170px;
+    display: flex;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #d2d2cf;
+    animation: marquee 20s linear infinite;
+    flex-shrink: 0;
+}
+
+.marquee-wrap p::after {
+    content: "•";
+    padding: 0 0.1em;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
 .sc-now {}
 
 .sc-now .wrapper {
