@@ -6,7 +6,9 @@
 .sc-visual {
     position: relative;
     overflow: hidden;
+    padding-top: 74px;
     --opacity: 1;
+    height: 100%;
 }
 
 .sc-visual:before {
@@ -84,6 +86,7 @@
 
 .sc-visual .text-wrap img {
     margin-top: 55px;
+    padding-bottom: 76px;
 }
 
 .sc-book {

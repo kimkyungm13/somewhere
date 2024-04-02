@@ -1,7 +1,14 @@
 $(function () {
     loadTl = gsap.timeline();
+    gsap.registerPlugin(PixiPlugin);
     loadTl.to(".sc-visual", { '--opacity': 0, duration: 1 }, "a")
-        .from(".char", { opacity: 0, scale: 60, }, "a")
+        .from(".char", {
+            duration: 2,
+            opacity: 0, scale: 10, filter: "blur(10px)", stagger: {
+                amount: 1,
+                from: "random"
+            }
+        }, "a")
         .from(".text-desc, .btn-gold, .f-img", { opacity: 0, yPercent: 100 })
 
 
