@@ -14,7 +14,7 @@ $(function () {
 
 
 
-    const visual = gsap.timeline({
+    visual = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-visual",
             start: "top top",
@@ -34,12 +34,58 @@ $(function () {
                 start: "top bottom",
                 end: "bottom top",
                 scrub: 0,
-                markers: true
+                // markers: true
 
             }
         })
     }));
+    // $(".slide").each(function (i, el) {
+    //     // windowStart = $(this).data('start') ? $(this).data('start') : '0%'
+    //     const slide = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: $(this),
+    //             start: `80% 5%`,
+    //             // end: "100% 80%",
+    //             markers: true
+    //         }
+    //     });
+    //     slide.from($(this).find('*'), {
+    //         opacity: 0, yPercent: 50, stagger: 0.1
+    //     })
+    // })
+    bookTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-book",
+            start: "0% 80%",
+            // end: "bottom bottom",
+            // markers: true
+        }
+    });
+    bookTl.from(".txt-box > *", {
+        opacity: 0, yPercent: 50, stagger: 0.1
+    })
 
-
+    nowTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-now",
+            start: "top 90%",
+            end: "top bottom",
+            markers: true
+        }
+    });
+    nowTl.from(".txt-wrap > *", {
+        opacity: 0, yPercent: 50, stagger: 0.1
+    })
+    snsTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-connect",
+            start: "top 90%",
+            // end: "bottom bottom",
+            // markers: true
+        }
+    });
+    snsTl.from(".sc-connect>*", {
+        opacity: 0, yPercent: 50, stagger: 0.1
+    })
 
 });//end

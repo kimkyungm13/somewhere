@@ -186,7 +186,9 @@
 
 }
 
-.sc-now {}
+.sc-now {
+    margin-top: 42px;
+}
 
 .sc-now .wrapper {
     display: flex;
@@ -255,8 +257,8 @@
     align-items: center;
     flex-direction: column;
     gap: 13px;
-    padding-bottom: 120px;
-    padding-top: 209px
+    margin-bottom: 120px;
+    margin-top: 209px
 }
 
 .sc-connect h2 {
