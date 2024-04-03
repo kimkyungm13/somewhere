@@ -1,15 +1,15 @@
 $(function () {
     loadTl = gsap.timeline();
     gsap.registerPlugin(PixiPlugin);
-    loadTl.to(".sc-visual", { '--opacity': 0, duration: 1 }, "a")
+    loadTl.to(".sc-visual", { '--opacity': 0, duration: 2, })
         .from(".char", {
-            duration: 2,
+            duration: 1,
             opacity: 0, scale: 10, filter: "blur(10px)", stagger: {
                 amount: 1,
                 from: "random"
             }
         }, "a")
-        .from(".text-desc, .btn-gold, .f-img", { opacity: 0, yPercent: 100 })
+        .from(".text-desc, .btn-gold, .f-img", { opacity: 0, yPercent: 100 },)
 
 
 
