@@ -73,7 +73,7 @@
 .sc-visual .text-wrap .text-tit span {
     color: var(--base-color);
     font-family: var(--frag);
-    font-size: 114px;
+    font-size: 94px;
     line-height: 1.1;
     display: inline-flex;
 }
@@ -87,7 +87,7 @@
 }
 
 .sc-visual .text-wrap .btn-gold {
-    margin-top: 56px;
+    margin-top: 47px;
 }
 
 .sc-visual .text-wrap img {
@@ -303,7 +303,7 @@
 
 }
 
-.sc-escape h2 {
+.sc-escape h2 .char {
     font-size: 167px;
     font-family: "PPFragment-GlareLight", serif;
     font-weight: normal;

@@ -56,13 +56,15 @@ $(function () {
     bookTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-book",
-            start: "0% 80%",
+            start: "20% 80%",
             // end: "bottom bottom",
             // markers: true
         }
     });
-    bookTl.from(".txt-box > *", {
+    bookTl.from(".sc-book .txt-box span", {
         opacity: 0, yPercent: 50, stagger: 0.1
+    }).from(".sc-book .btn-border", {
+        opacity: 0, yPercent: 50,
     })
 
     nowTl = gsap.timeline({
@@ -87,5 +89,31 @@ $(function () {
     snsTl.from(".sc-connect>*", {
         opacity: 0, yPercent: 50, stagger: 0.1
     })
+    aboutTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-about .conts-wrap",
+            start: "0% 80%",
+            // end: "bottom bottom",
+            // markers: true
+        }
+    });
+    aboutTl.from(".txt-line > *", {
+        opacity: 0, yPercent: 50, stagger: 0.2
+    }).from(".sc-about .txt-area h2", {
+        opacity: 0, yPercent: 50,
+    })
 
+
+
+    withusTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-withus .txt-box",
+            start: "10% 80%",
+            // end: "bottom bottom",
+            // markers: true
+        }
+    });
+    withusTl.from(".sc-withus .txt-box > *", {
+        opacity: 0, yPercent: 50, stagger: 0.2
+    })
 });//end

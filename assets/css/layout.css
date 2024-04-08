@@ -44,6 +44,46 @@
     color: var(--base-color);
 }
 
+#header .btn-menu .icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#header .btn-menu .icon span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+#header .btn-menu .icon span:nth-child(1) {
+    transform: translateY(-3px) scaleX(1);
+}
+
+#header .btn-menu:hover .icon span:nth-child(1) {
+    transform: translateY(-3px) scaleX(0.67);
+}
+
+#header .btn-menu .icon span:nth-child(2) {
+    transform: translateY(3px) scaleX(0.67);
+}
+
+#header .btn-menu:hover .icon span:nth-child(2) {
+    transform: translateY(3px) scaleX(1);
+}
+
+#header .btn-menu .label {
+    margin-left: 0.75rem;
+}
+
 #header .btn-booking {
     position: relative;
     font-family: var(--term);
