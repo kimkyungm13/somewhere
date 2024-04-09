@@ -1,15 +1,45 @@
 $(function () {
+    /**
+     * 스크롤 시 헤더 고정
+     */
+    let lastScroll = '0';
+    $(window).scroll(function () {
+        curr = $(this).scrollTop();
+        if (curr > lastScroll || curr == 0
+        ) {
+            $('#header').removeClass('wheel');
+        } else {
+            $('#header').addClass('wheel');
+        }
+        lastScroll = curr
+    });
+
+
+
+
+
+    // window.addEventListener('scroll', function () {
+    //     const scrollPosition = window.scrollY;
+    //     winH = window.innerHeight;
+    //     if (scrollPosition > (winH / 3)) {
+    //         $('#header').addClass('wheel');
+    //     } else {
+    //         $('header').removeClass('wheel');
+    //         $('.menu-wrap').css('display', 'none');
+    //     }
+    // });
+
+
     loadTl = gsap.timeline();
-    gsap.registerPlugin(PixiPlugin);
     loadTl.to(".sc-visual", { '--opacity': 0, duration: 2, })
-        .from(".char", {
+        .from(".sc-visual .word .char", {
             duration: 1,
             opacity: 0, scale: 10, filter: "blur(10px)", stagger: {
                 amount: 1,
                 from: "random"
             }
         }, "a")
-        .from(".text-desc, .btn-gold, .f-img", { opacity: 0, yPercent: 100 },)
+        .from(".sc-visual .text-desc,.sc-visual .btn-gold,.sc-visual .f-img", { opacity: 0, yPercent: 100 },)
 
 
 
@@ -39,20 +69,7 @@ $(function () {
             }
         })
     }));
-    // $(".slide").each(function (i, el) {
-    //     // windowStart = $(this).data('start') ? $(this).data('start') : '0%'
-    //     const slide = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: $(this),
-    //             start: `80% 5%`,
-    //             // end: "100% 80%",
-    //             markers: true
-    //         }
-    //     });
-    //     slide.from($(this).find('*'), {
-    //         opacity: 0, yPercent: 50, stagger: 0.1
-    //     })
-    // })
+
     bookTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-book",
@@ -67,17 +84,30 @@ $(function () {
         opacity: 0, yPercent: 50,
     })
 
+
+    /**
+     * NOW BOOKING 
+     * 
+     */
+
     nowTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-now",
             start: "top 90%",
             end: "top bottom",
-            markers: true
+            // markers: true
         }
     });
     nowTl.from(".txt-wrap > *", {
         opacity: 0, yPercent: 50, stagger: 0.1
     })
+
+
+
+    /**
+     * sc-connect sns list
+     * 
+     */
     snsTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-connect",
@@ -89,15 +119,42 @@ $(function () {
     snsTl.from(".sc-connect>*", {
         opacity: 0, yPercent: 50, stagger: 0.1
     })
+
+    /** escape  */
+
+    escapeTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-escape",
+            start: "top 35%",
+            end: "bottom bottom",
+            scrub: 1,
+            markers: true
+        }
+    });
+    escapeTl.to(".sc-escape .char", { opacity: 1, y: 0, },)
+
+
+
+    gsap.from(".sc-escape .btn-gold", {
+        scrollTrigger: '.sc-escape .btn-gold',
+        opacity: 0,
+        yPercent: 50,
+    },)
+
+    /**about */
+
+
+
+
     aboutTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-about .conts-wrap",
-            start: "0% 80%",
-            // end: "bottom bottom",
+            start: "top 90%",
+            end: "bottom bottom",
             // markers: true
         }
     });
-    aboutTl.from(".txt-line > *", {
+    aboutTl.from(".sc-about .txt-line > *", {
         opacity: 0, yPercent: 50, stagger: 0.2
     }).from(".sc-about .txt-area h2", {
         opacity: 0, yPercent: 50,

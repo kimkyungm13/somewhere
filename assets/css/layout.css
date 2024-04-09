@@ -12,7 +12,25 @@
     top: 0;
     width: 100%;
     padding: 26px 43px;
-    z-index: 2;
+    z-index: 3;
+}
+
+#header.wheel {
+    position: fixed;
+    background: var(--base-color);
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08);
+}
+
+#header.wheel h1.logo a {
+    color: #000;
+}
+
+#header.wheel .btn-menu {
+    color: #000
+}
+
+#header.wheel .btn-booking {
+    color: #000
 }
 
 #header h1.logo {
@@ -144,6 +162,7 @@
 #footer .inner .f-top section {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 #footer .inner .f-top .sc-contact {
@@ -153,7 +172,35 @@
 #footer .inner .f-top .sc-contact .mail {}
 
 #footer .inner .f-top .sc-contact .hiring {
+    position: relative;
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    display: inline-block;
+    color: var(--base-color);
     margin-top: 16px;
+}
+
+#footer .inner .f-top .sc-contact .hiring:hover:after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+#footer .inner .f-top .sc-contact .hiring:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #footer .inner .f-top .sc-glasgow {
@@ -167,7 +214,9 @@
     width: 16.66666667%
 }
 
-#footer .inner .f-top .sc-social .list {}
+#footer .inner .f-top .sc-social .list li {
+    line-height: 28px;
+}
 
 #footer .inner .f-logo {
     margin: 157px 0 28px 0;
@@ -194,3 +243,11 @@
 #footer .inner .f-bottom li {}
 
 #footer .inner .f-bottom li a {}
+
+#footer a {
+    transition: opacity 0.3s ease;
+}
+
+#footer a:not(.hiring):hover {
+    opacity: 0.3;
+}
