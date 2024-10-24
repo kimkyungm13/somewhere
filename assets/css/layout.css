@@ -1,0 +1,265 @@
+@import url(./common.css);
+@import url(./reset.css);
+@import url(./vso5ccd.css);
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 26px 43px;
+    z-index: 3;
+    /* transition: 0.3s; */
+}
+
+#header.fixed {
+    position: fixed;
+    transform: translateY(-100%);
+    background: var(--base-color);
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08);
+    /* transition: 0s; */
+}
+
+#header.move {
+    transition: 0.3s;
+}
+
+#header.wheel {
+    transform: translateY(0);
+    /* transition: 0.3s; */
+}
+
+#header.fixed h1.logo a {
+    color: #000;
+}
+
+#header.fixed .btn-menu {
+    color: #000
+}
+
+#header.fixed .btn-booking {
+    color: #000
+}
+
+#header h1.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header h1.logo a {
+    display: block;
+    height: 41px;
+    color: var(--base-color);
+}
+
+#header h1.logo a svg {
+    height: 100%;
+}
+
+#header .btn-menu {
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    color: var(--base-color);
+}
+
+#header .btn-menu .icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#header .btn-menu .icon span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+#header .btn-menu .icon span:nth-child(1) {
+    transform: translateY(-3px) scaleX(1);
+}
+
+#header .btn-menu:hover .icon span:nth-child(1) {
+    transform: translateY(-3px) scaleX(0.67);
+}
+
+#header .btn-menu .icon span:nth-child(2) {
+    transform: translateY(3px) scaleX(0.67);
+}
+
+#header .btn-menu:hover .icon span:nth-child(2) {
+    transform: translateY(3px) scaleX(1);
+}
+
+#header .btn-menu .label {
+    margin-left: 0.75rem;
+}
+
+#header .btn-booking {
+    position: relative;
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 11px;
+    display: inline-block;
+    color: var(--base-color);
+    line-height: 2;
+}
+
+#header .btn-booking:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#header .btn-booking:hover:after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+#footer {
+    background: #000612;
+    color: var(--base-color)
+}
+
+#footer .inner {
+    padding: 80px 0 40px 0
+}
+
+#footer .inner .f-top {
+    display: flex;
+}
+
+#footer h2 {
+    font-size: 11px;
+    font-family: var(--term);
+    color: #808389;
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+}
+
+#footer .inner .f-top .btn-area {
+    width: 45.83333333%
+}
+
+#footer .inner .f-top section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#footer .inner .f-top .sc-contact {
+    width: 20.83333333%
+}
+
+#footer .inner .f-top .sc-contact .mail {}
+
+#footer .inner .f-top .sc-contact .hiring {
+    position: relative;
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    display: inline-block;
+    color: var(--base-color);
+    margin-top: 16px;
+}
+
+#footer .inner .f-top .sc-contact .hiring:hover:after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+#footer .inner .f-top .sc-contact .hiring:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#footer .inner .f-top .sc-glasgow {
+    width: 20.83333333%;
+    line-height: 2;
+}
+
+#footer .inner .f-top .sc-glasgow .info .time {}
+
+#footer .inner .f-top .sc-social {
+    width: 16.66666667%
+}
+
+#footer .inner .f-top .sc-social .list li {
+    line-height: 28px;
+}
+
+#footer .inner .f-logo {
+    margin: 157px 0 28px 0;
+}
+
+#footer .inner .f-logo svg {
+    width: 100%;
+    height: auto;
+}
+
+#footer .inner .f-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #808389
+}
+
+#footer .inner .f-bottom .link-list {
+    display: flex;
+    gap: 22px;
+}
+
+#footer .inner .f-bottom li {}
+
+#footer .inner .f-bottom li a {}
+
+#footer a {
+    transition: opacity 0.3s ease;
+}
+
+#footer a:not(.hiring):hover {
+    opacity: 0.3;
+}

@@ -1,0 +1,95 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * area-normal:
+ *   - http://typekit.com/eulas/0000000000000000774b9fc0
+ *   - http://typekit.com/eulas/0000000000000000774b9fbd
+ * ivypresto-display:
+ *   - http://typekit.com/eulas/00000000000000007735e5a5
+ *   - http://typekit.com/eulas/00000000000000007735e5b2
+ * termina:
+ *   - http://typekit.com/eulas/00000000000000007735b219
+ *   - http://typekit.com/eulas/00000000000000007735b21c
+ *
+ * © 2009-2024 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2023-12-18 10:30:07 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=vso5ccd&ht=tk&f=28971.28977.45402.45403.51697.51699&a=2913569&app=typekit&e=css");
+
+@font-face {
+    font-family: "termina";
+    src: url("https://use.typekit.net/af/3a0b27/00000000000000007735b219/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/3a0b27/00000000000000007735b219/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/3a0b27/00000000000000007735b219/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "termina";
+    src: url("https://use.typekit.net/af/1d76ab/00000000000000007735b21c/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/1d76ab/00000000000000007735b21c/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/1d76ab/00000000000000007735b21c/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "ivypresto-display";
+    src: url("https://use.typekit.net/af/5bc6b2/00000000000000007735e5a5/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff2"), url("https://use.typekit.net/af/5bc6b2/00000000000000007735e5a5/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff"), url("https://use.typekit.net/af/5bc6b2/00000000000000007735e5a5/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 100;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "ivypresto-display";
+    src: url("https://use.typekit.net/af/6a6cae/00000000000000007735e5b2/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("woff2"), url("https://use.typekit.net/af/6a6cae/00000000000000007735e5b2/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("woff"), url("https://use.typekit.net/af/6a6cae/00000000000000007735e5b2/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("opentype");
+    font-display: auto;
+    font-style: italic;
+    font-weight: 100;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "area-normal";
+    src: url("https://use.typekit.net/af/348926/0000000000000000774b9fc0/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/348926/0000000000000000774b9fc0/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/348926/0000000000000000774b9fc0/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "area-normal";
+    src: url("https://use.typekit.net/af/911b4f/0000000000000000774b9fbd/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/911b4f/0000000000000000774b9fbd/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/911b4f/0000000000000000774b9fbd/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+.tk-termina {
+    font-family: "termina", sans-serif;
+}
+
+.tk-ivypresto-display {
+    font-family: "ivypresto-display", serif;
+}
+
+.tk-area-normal {
+    font-family: "area-normal", sans-serif;
+}
+
+@font-face {
+    font-family: "PPFragment-GlareLight";
+    src: url(../fonts/PPFragment-GlareLight.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
