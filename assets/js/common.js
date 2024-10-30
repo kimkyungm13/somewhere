@@ -134,7 +134,7 @@ $(function () {
             start: "0 80%",
             end: "100% 100%",
             duration: 1,
-            markers: true
+            // markers: true
         }
     });
     nowTl.from(".txt-wrap > *", {
