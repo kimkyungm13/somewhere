@@ -1,33 +1,23 @@
 $(function () {
-
     const lenis = new Lenis()
-
     lenis.on('scroll', (e) => {
         console.log(e)
     })
-
     lenis.on('scroll', ScrollTrigger.update)
-
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000)
     })
-
     gsap.ticker.lagSmoothing(0)
 
-
-    /**
-     * 스크롤 시 헤더 고정
-     */
+    /* 스크롤 시 헤더 고정 */
     let lastScroll = '0';
     $(window).scroll(function () {
         curr = $(this).scrollTop();
-
         if (curr >= 80) {
             $('#header').addClass('fixed');
         } else {
             $('#header').removeClass('fixed');
         }
-
         if (curr >= 300) {
             $('#header').addClass('move');
 
@@ -40,37 +30,45 @@ $(function () {
         } else {
             $('#header').removeClass('wheel');
         }
-
         if (curr <= 50) {
             $('#header').removeClass('move');
         }
-
-        // if (curr >= 210) {
-
-        // }else{
-        //     $('#header').removeClass('wheel');
-        // }
-
-
-
-
+    });
+    $('.btn-menu').click(function () {
+        $('.left-menu').addClass('active');
+        $('.dimmed').addClass('active');
+        $('body').addClass('hidden')
+        lenis.stop();
+    }); $('.close , .dimmed').click(function () {
+        $('.left-menu').removeClass('active');
+        $('.dimmed').removeClass('active');
+        $('body').removeClass('hidden');
+        lenis.start();
+    });
+    $('.up').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 
 
+    $('.left-menu .link-list a').each(function (index) {
+        $(this).click(function (e) {
+            e.preventDefault()
+            $(this).closest('.left-menu').find('.left-menu-second').eq(index).stop().toggle("slide", { direction: "right" })
+
+        })
+    })
 
 
 
-    // window.addEventListener('scroll', function () {
-    //     const scrollPosition = window.scrollY;
-    //     winH = window.innerHeight;
-    //     if (scrollPosition > (winH / 3)) {
-    //         $('#header').addClass('wheel');
-    //     } else {
-    //         $('header').removeClass('wheel');
-    //         $('.menu-wrap').css('display', 'none');
-    //     }
-    // });
 
+    // GSAP
+    gsap.defaults({
+        ease: "ease",
+    });
+    const headTxt = new SplitType('.sc-visual .text-tit .txt-line', { types: 'words, chars', });
+    const splitLines = new SplitType('.split-line', { types: 'lines' });
+    $('.line').wrap('<div class="sc-visual text-tit">')
 
     loadTl = gsap.timeline();
     loadTl.to(".sc-visual", { '--opacity': 0, duration: 2, })
@@ -83,13 +81,7 @@ $(function () {
         }, "a")
         .from(".sc-visual .text-desc,.sc-visual .btn-gold,.sc-visual .f-img", { opacity: 0, yPercent: 100 },)
 
-
-
-    gsap.defaults({
-        ease: "ease",
-    });
-
-    visual = gsap.timeline({
+    visualTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-visual",
             start: "0% 0%",
@@ -97,7 +89,7 @@ $(function () {
             scrub: 0,
         }
     });
-    visual
+    visualTl
         .to(".sc-visual .content", { yPercent: 20 }, "a")
         .to(".text-wrap", { opacity: 0 }, "a")
 
@@ -115,22 +107,6 @@ $(function () {
         })
     })
 
-
-    // document.querySelectorAll(".parallaxImage").forEach((function (e) {
-    //     var t = e.querySelector("img");
-    //     gsap.to(t, {
-    //         yPercent: -20,
-    //         ease: "none",
-    //         scrollTrigger: {
-    //             trigger: e,
-    //             start: "top bottom",
-    //             end: "bottom top",
-    //             scrub: 0,
-    //             // markers: true
-
-    //         }
-    //     })
-    // }));
 
     bookTl = gsap.timeline({
         scrollTrigger: {
@@ -208,9 +184,6 @@ $(function () {
     },)
 
     /**about */
-
-
-
 
     aboutTl = gsap.timeline({
         scrollTrigger: {

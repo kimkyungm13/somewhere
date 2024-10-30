@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HOME - Somewhere by Nico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet"
@@ -12,20 +12,81 @@
     <link rel="stylesheet" href="./assets/css/layout.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
     <!--  gsap-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="./assets/js/lenis.min.js"></script>
+    <!-- split-->
+    <script src="./assets/js/split.min.js"></script>
     <!--remix con-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="./assets/js/common.js"></script>
 </head>
 
 <body>
+    <div class="left-wrapper">
+        <div class="dimmed"></div>
+        <div class="left-menu">
+            <div class="left-menu-first">
+                <button class="close">
+                    <div class="close-icon">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="label">CLOSE</p>
+                </button>
+                <div class="link-list">
+                    <ul class="list-wrap">
+                        <li><a class="login" href="">OUR WORLD</a></li>
+                        <li><a class="join" href="">BOOKING</a></li>
+                        <li><a class="join" href="">GIFT VOUCHERS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left-menu-second">
+                <div class="navMenu__secondary-nav">
+                    <a href="https://somewherebynico.co.uk/themes/midnight-express/">
+                        <span>MURDER ON THE MIDNIGHT EXPRESS </span>
+                        <span>Glasgow</span>
+                    </a>
+                    <a href="https://somewherebynico.co.uk/themes/midnight-express-edinburgh/">
+                        <span>MurdEr on the Midnight Express </span>
+                        <span>Edinburgh</span>
+                    </a>
+                    <a href="https://somewherebynico.co.uk/worlds/">
+                        <span>View all</span>
+                    </a>
+                </div>
+            </div>
+            <div class="left-menu-second">
+                <div class="navMenu__secondary-nav">
+                    <a href="https://somewherebynico.co.uk/themes/midnight-express/booking/">
+                        <span>
+                            MURDER ON THE MIDNIGHT EXPRESS
+                        </span>
+                        <span>Glasgow</span>
+                    </a>
+                    <a href="https://somewherebynico.co.uk/themes/midnight-express-edinburgh/booking/">
+                        <span>
+                            MurdEr on the Midnight Express
+                        </span>
+                        <span>Edinburgh</span>
+                    </a>
+
+                    <a href="https://somewherebynico.co.uk/book-ahead/">
+                        <span>Book ahead</span>
+                        <span>All locations</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="wrapper">
         <header id="header">
             <button class="btn-menu">
@@ -98,49 +159,14 @@
                     </div>
                     <div class="text-wrap">
                         <div class="text-tit">
-                            <div class="txt-line01">
-                                <span class="word">
-                                    <span class="char">E</span>
-                                    <span class="char">V</span>
-                                    <span class="char">E</span>
-                                    <span class="char">R</span>
-                                </span>
-                                <span class="whitespace"> </span>
-                                <span class="word">
-                                    <span class="char">C</span>
-                                    <span class="char">H</span>
-                                    <span class="char">A</span>
-                                    <span class="char">N</span>
-                                    <span class="char">G</span>
-                                    <span class="char">I</span>
-                                    <span class="char">N</span>
-                                    <span class="char">G</span>
-                                </span>
+                            <div class="txt-line">
+                                EVER CHANGING
                             </div>
-                            <div class="txt-line02">
-                                <span class="word">
-                                    <span class="char">W</span>
-                                    <span class="char">O</span>
-                                    <span class="char">R</span>
-                                    <span class="char">L</span>
-                                    <span class="char">D</span>
-                                    <span class="char">S</span>
-                                </span>
-                                <span class="whitespace"> </span>
-                                <span class="word">
-                                    <span class="char">A</span>
-                                    <span class="char">W</span>
-                                    <span class="char">A</span>
-                                    <span class="char">I</span>
-                                    <span class="char">T</span>
-                                </span>
+                            <div class="txt-line">
+                                WORLDS AWAIT
                             </div>
-                            <div class="txt-line03">
-                                <span class="word">
-                                    <span class="char">Y</span>
-                                    <span class="char">O</span>
-                                    <span class="char">U</span>
-                                </span>
+                            <div class="txt-line">
+                                YOU
                             </div>
                         </div>
                         <p class="text-desc">WHICH ONE WILL YOU EXPLORE?</p>
@@ -163,12 +189,10 @@
                     <div class="txt"><span class="line02">A cocktail bar and experience.</span></div>
                     <div class="txt"><span class="line03">A portal to the extraordinary.</span></div>
                 </div>
-
                 <a href="" class="btn btn-border">
                     <span>BOOK NOW</span>
                     <span>BOOK NOW</span>
                 </a>
-
             </div>
             <aside class="marquee-wrap">
                 <p>Explore our worlds</p>
@@ -195,7 +219,10 @@
                                 dreamworld of magic, mystery and<br>
                                 adventure.”
                             </p>
-                            <a href="" class="btn btn-gold">EXPLORE</a>
+                            <a href="" class="btn btn-gold">
+                                <span>EXPLORE</span>
+                                <span>EXPLORE</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -222,7 +249,10 @@
                     <span class="char c5">p</span>
                     <span class="char c6">e</span>
                 </span>
-                <a href="" class="btn btn-gold">TREAT SOMEONE</a>
+                <a href="" class="btn btn-gold">
+                    <span>TREAT SOMEONE</span>
+                    <span>TREAT SOMEONE</span>
+                </a>
             </section>
             <section class="sc-about inner">
                 <div class="conts-wrap">
@@ -235,12 +265,12 @@
                                 <span class="line03">Encounter a cocktail bar like no other.</span>
                             </div>
                         </div>
-                        <div class="img-area parallaxImage">
+                        <div class="parallaxImage" data-parallax="true">
                             <img src="./assets/images/Somewhere-about-4.jpg" alt="">
                         </div>
                     </div>
                     <div class="conts bottom">
-                        <div class="img-area parallaxImage img01">
+                        <div class="parallaxImage" data-parallax="true">
                             <img src="./assets/images/Somewhere-about-5.jpg" alt="">
                         </div>
                         <div class="txt-area">
@@ -271,14 +301,14 @@
                                 bite, sound and sight, to bring these fantasy realms to life.
                             </p>
                         </div>
-                        <div class="img-area parallaxImage img02">
+                        <div class="parallaxImage img02" data-parallax="true">
                             <img src="./assets/images/somewhere-gallery-7.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </section>
             <section class="sc-withus inner">
-                <div class="parallaxImage"><img src="./assets/images/connect2.jpg" alt=""></div>
+                <div class="parallaxImage" data-parallax="true"><img src="./assets/images/connect2.jpg" alt=""></div>
                 <div class="txt-box">
                     <span class="at">@SOMEWHEREBYNICO</span>
                     <h2>CONNECT WITH US</h2>
@@ -305,7 +335,10 @@
                         </form>
                         <p class="receive">By subscribing to our newsletter, you agree to receive periodic emails from
                             us.</p>
-                        <a href="" class="btn btn-gold">REGISTER</a>
+                        <a href="" class="btn btn-gold">
+                            <span>REGISTER</span>
+                            <span>REGISTER</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -314,31 +347,50 @@
 
             <div class="inner">
                 <div class="f-top">
-                    <div class="btn-area"><a href="" class="btn btn-border">MAKE A BOOKING</a></div>
-                    <section class="sc-contact">
-                        <h2>CONTACT</h2>
-                        <a href="mailto:info@somewherebynico.co.uk" class="mail">info@somewherebynico.co.uk</a>
-                        <a href="" class="hiring">WE'RE HIRING</a>
+                    <div class="btn-area">
+                        <a href="" class="btn btn-border blend"><span>MAKE A BOOKING</span><span>MAKE A
+                                BOOKING</span></a>
+                    </div>
+                    <section class="sc-glasgow">
+                        <h2>EDINBURGH</h2>
+                        <a href="" class="txt-hover">
+                            <address>39A-40A Queensferry Street<br>
+                                Edinburgh, EH2 4RA
+                            </address>
+                        </a>
+                        <ul class="time">
+                            <li>Mon: 4:30pm — 11:45pm</li>
+                            <li>Tue: Closed</li>
+                            <li>Wed — Thurs: 4:30pm — 11:45pm</li>
+                            <li>Fri — Sun: 12pm — 11:45pm</li>
+                        </ul>
+
                     </section>
                     <section class="sc-glasgow">
                         <h2>GLASGOW</h2>
-                        <a href="" class="info">
+                        <a href="" class="txt-hover">
                             <address>358 Byres Rd<br>
                                 Glasgow G12 8AW</address>
-                            <ul class="time">
-                                <li>Wed — Thurs from 5pm — Late</li>
-                                <li>Fri — Sat from 1pm — Late</li>
-                                <li>Sun from 12pm — Late</li>
-                                <li>Closed Mon — Tues</li>
-                            </ul>
                         </a>
+                        <ul class="time">
+                            <li>Mon — Tue: Closed</li>
+                            <li>Wed — Thur: 5pm — Late</li>
+                            <li>Fri — Sat: 1pm — Late</li>
+                            <li>Sun: 12pm — Late</li>
+                        </ul>
+                    </section>
+                    <section class="sc-contact">
+                        <h2>CONTACT</h2>
+                        <a href="mailto:info@somewherebynico.co.uk"
+                            class="mail txt-hover">info@somewherebynico.co.uk</a>
+                        <a href="" class="hiring">WE'RE HIRING</a>
                     </section>
                     <section class="sc-social">
                         <h2>SOCIAL</h2>
                         <ul class="list">
-                            <li><a href="">Instagram</a></li>
-                            <li><a href="">TikTok</a></li>
-                            <li><a href="">Facebook</a></li>
+                            <li><a href="" class="txt-hover">Instagram</a></li>
+                            <li><a href="" class="txt-hover">TikTok</a></li>
+                            <li><a href="" class="txt-hover">Facebook</a></li>
                         </ul>
                     </section>
                 </div>
