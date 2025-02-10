@@ -11,7 +11,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    padding: 26px 43px;
+    padding: 26px clamp(18px, 2.4vw, 43px);
     z-index: 3;
     /* transition: 0.3s; */
 }
@@ -127,6 +127,18 @@
     line-height: 2;
 }
 
+#header .btn-booking-m {
+    display: none;
+    width: 40px;
+    height: 40px;
+    color: #fff
+}
+
+#header .btn-booking-m svg {
+    height: 100%;
+    width: 100%;
+}
+
 #header .btn-booking:after {
     content: "";
     position: absolute;
@@ -144,6 +156,284 @@
 #header .btn-booking:hover:after {
     transform: scaleX(0);
     transform-origin: right;
+}
+
+.left-wrapper {
+    position: relative;
+}
+
+.dimmed.active {
+    opacity: 1;
+    z-index: 3;
+    visibility: visible;
+}
+
+.dimmed {
+    position: fixed;
+    inset: 0;
+    background: #191c22f2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.left-menu {
+    /* width: 32%; */
+    height: 100vh;
+    transition: .3s;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    transform: translateX(-100%);
+    /* overflow-y: auto; */
+    display: flex;
+    /* padding: 30px; */
+}
+
+.left-menu-first {
+    display: flex;
+    background: #000;
+    z-index: 4;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 574px;
+}
+
+.left-menu-second {
+    width: 100%;
+    height: 100vh;
+    transition: .3s;
+    background: #0d121e;
+    z-index: 2;
+    /* display: none; */
+    overflow-y: auto;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* transform: translateX(-100%); */
+}
+
+.left-menu-second.on {
+    transform: translateX(100%);
+}
+
+.left-menu-second a {
+    display: flex;
+    flex-direction: column;
+    color: #e9e9e6;
+    font-family: var(--term);
+}
+
+.left-menu.active {
+    transform: translateX(0);
+    transition: transform 0.5s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.left-menu .close {
+    display: flex;
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    align-items: center;
+    z-index: 10;
+    padding: 30px 50px;
+    font-size: 11px;
+    color: var(--base-color);
+
+}
+
+.left-menu .close-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.left-menu .close-icon>span {
+    position: absolute;
+    display: block;
+    width: 67%;
+    height: 1px;
+    background: currentColor;
+}
+
+.left-menu .close-icon>span:nth-child(1) {
+    transform: rotate(-45deg);
+}
+
+.left-menu .close-icon>span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.left-menu .left-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px;
+}
+
+.left-menu .link-list {
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 36px;
+    /* visibility: hidden; */
+    font-family: var(--frag);
+    color: var(--base-color);
+    width: 100%;
+    padding-top: 50px;
+}
+
+.left-menu .link-list .list-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.left-menu .link-list a {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 0 50px;
+}
+
+.left-menu .link-list a.active:after {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.left-menu .link-list a:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    right: 30px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--base-color);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-400%)
+}
+
+.left-menu .sc-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left-menu .sc-contact h2 {
+    font-size: 11px;
+    font-family: var(--term);
+    color: #808389;
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+}
+
+.left-menu .sc-contact a.txt-hover {
+    transition: opacity 0.3s ease;
+    color: #fff
+}
+
+.left-menu .sc-contact a.txt-hover:hover {
+    opacity: 0.3;
+}
+
+.left-menu .sc-contact .hiring {
+    position: relative;
+    font-family: var(--term);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    display: inline-block;
+    color: var(--base-color);
+    margin-top: 40px;
+}
+
+.left-menu .sc-contact .hiring:hover:after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.left-menu .sc-contact .hiring:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.left-menu .sns-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left-menu .sns-list li {}
+
+.left-menu .sns-list li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid #fff;
+    color: #fff;
+    overflow: hidden;
+}
+
+.left-menu .sns-list li a i {
+    transition: transform 0.5s;
+}
+
+.left-menu .sns-list li a:hover i {
+    transform: translateY(-100%);
+    /* opacity: 0; */
+}
+
+.left-menu .sns-list li a:hover:after {
+    transform: translateY(-100%) scale(2);
+}
+
+.left-menu .sns-list li a:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 9999px;
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    transform: translateY(0%);
+    transition: all 0.3s;
+}
+
+.left-menu .sns-list li:not(:last-child) a {
+    border-right: none
+}
+
+.left-menu .sns-list li a i {
+    font-size: 22px;
 }
 
 #footer {
@@ -266,4 +556,19 @@
 
 #footer .time {
     margin-top: 20px;
+}
+
+@media (max-width:768px) {
+    #header .btn-booking {
+        display: none;
+    }
+
+    #header .btn-booking-m {
+        display: block;
+    }
+
+    #header .btn-menu .label {
+        display: none;
+    }
+
 }

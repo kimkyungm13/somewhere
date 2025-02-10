@@ -28,6 +28,15 @@
     width: 1px;
 }
 
+[data-parallax="true"] {
+    overflow: hidden;
+}
+
+[data-parallax="true"] img {
+    height: 125%;
+    object-fit: cover;
+}
+
 .btn {
     position: relative;
     display: inline-flex;
@@ -149,5 +158,23 @@
 }
 
 .btn.btn-border.blend>span:nth-child(2) {
+    color: var(--navy-color);
+}
+
+.btn-white {
+    position: relative;
+    /* border: 1px solid #000612; */
+    color: var(--base-color);
+}
+
+.btn.btn-white::after {
+    background: #fff;
+}
+
+.btn.btn-white>span:nth-child(1) {
+    color: var(--base-color);
+}
+
+.btn.btn-white>span:nth-child(2) {
     color: var(--navy-color);
 }

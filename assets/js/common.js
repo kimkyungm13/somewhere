@@ -51,13 +51,40 @@ $(function () {
     });
 
 
-    $('.left-menu .link-list a').each(function (index) {
-        $(this).click(function (e) {
-            e.preventDefault()
-            $(this).closest('.left-menu').find('.left-menu-second').eq(index).stop().toggle("slide", { direction: "right" })
+    // $('.left-menu .link-list a').each(function (index) {
+    //     $(this).click(function (e) {
+    //         e.preventDefault()
+    //         $(this).closest('.left-menu').find('.left-menu-second').eq(index).stop().toggle("slide", { direction: "right" })
 
-        })
-    })
+    //     })
+    // })
+
+
+
+    // 메뉴 항목에 마우스를 올렸을 때 해당 서브 메뉴 열기
+    $('.left-menu .link-list li').mouseenter(function () {
+        let menuName = $(this).data('menu');
+        $(this).find('a').addClass('active');
+        $('.left-menu-second').removeClass('on'); // 기존 열려있는 메뉴 닫기
+        $(menuName).addClass('on'); // 해당하는 메뉴 열기
+    });
+
+    // 서브 메뉴를 유지하기 위해, .left-menu-second에서도 마우스를 벗어날 때만 닫히게 처리
+    $('.left-menu-second').on('mouseleave', function () {
+
+        setTimeout(function () {
+            // .link-list li와 .left-menu-second 어느 곳에도 마우스가 없는 경우에만 닫기
+            if (!$('.left-menu-second:hover').length) {
+                $('.left-menu-second').removeClass('on');
+                $('.left-menu .link-list li').find('a').removeClass('active');
+            }
+        }, 100); // 약간의 지연시간 추가로 자연스럽게 연결
+    });
+
+
+
+
+
 
 
 
@@ -101,7 +128,7 @@ $(function () {
                 start: "0% 100%",
                 end: "100% 0%",
                 scrub: 0,
-                // markers: true,
+                markers: true,
             },
             yPercent: -20
         })
@@ -164,9 +191,9 @@ $(function () {
     escapeTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-escape",
-            start: "top 60%",
+            start: "0 50%",
             end: "bottom bottom",
-            scrub: 1,
+            scrub: 0,
             // markers: true
         }
     });
@@ -212,4 +239,20 @@ $(function () {
     withusTl.from(".sc-withus .txt-box > *", {
         opacity: 0, yPercent: 50, stagger: 0.2
     })
+
+
+
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 990px)", () => {
+        // desktop setup code here...
+    });
+
+
+    mm.add("(max-width: 799px)", () => {
+        // mobile setup code here...
+    });
+
+
+
 });//end
