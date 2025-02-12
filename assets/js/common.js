@@ -141,6 +141,7 @@ $(function () {
             start: "0% 70%",
             end: "100% 100%",
             // markers: true
+
         }
     });
     bookTl.to(".sc-book .txt-box span", {
