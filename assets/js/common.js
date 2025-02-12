@@ -128,7 +128,7 @@ $(function () {
                 start: "0% 100%",
                 end: "100% 0%",
                 scrub: 0,
-                markers: true,
+                // markers: true,
             },
             yPercent: -20
         })
