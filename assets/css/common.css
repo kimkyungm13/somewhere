@@ -16,7 +16,7 @@
 }
 
 .inner {
-    margin: 0 94px;
+    margin: 0 clamp(20px, 4.8vw, 94px);
 }
 
 .blind {

@@ -186,21 +186,7 @@ $(function () {
         opacity: 0, yPercent: 50, stagger: 0.1
     })
 
-    /** escape  */
 
-    escapeTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".sc-escape",
-            start: "0 50%",
-            end: "bottom bottom",
-            scrub: 0,
-            // markers: true
-        }
-    });
-    escapeTl.from(".sc-escape .char", {
-        opacity: 0,
-        yPercent: "random(0,100)",
-    },)
 
 
 
@@ -245,12 +231,38 @@ $(function () {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 990px)", () => {
-        // desktop setup code here...
+        /** escape  */
+        escapeTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".sc-escape",
+                start: "0 50%",
+                end: "100% 100%",
+                scrub: 0,
+                // markers: true
+            }
+        });
+        escapeTl.from(".sc-escape .char", {
+            opacity: 0,
+            yPercent: "random(0,300)",
+        },)
     });
 
 
     mm.add("(max-width: 799px)", () => {
-        // mobile setup code here...
+        /** escape  */
+        escapeTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".sc-escape",
+                start: "0 40%",
+                end: "100% 50%",
+                scrub: 0,
+                // markers: true
+            }
+        });
+        escapeTl.from(".sc-escape .char", {
+            opacity: 0,
+            yPercent: "random(0,300)",
+        },)
     });
 
 
