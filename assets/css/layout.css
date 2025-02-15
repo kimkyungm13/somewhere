@@ -216,6 +216,13 @@
     /* transform: translateX(-100%); */
 }
 
+.left-menu-second .left-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 110px;
+}
+
 .left-menu-second.on {
     transform: translateX(100%);
 }
@@ -225,6 +232,16 @@
     flex-direction: column;
     color: #e9e9e6;
     font-family: var(--term);
+}
+
+.left-menu-second a span {
+    text-transform: uppercase;
+}
+
+.left-menu-second a span.head-tit {}
+
+.left-menu-second a span.sub-tit {
+    color: #40444d
 }
 
 .left-menu.active {
@@ -311,6 +328,7 @@
     opacity: 1;
     transform: translateX(0)
 }
+
 
 .left-menu .link-list a:after {
     position: absolute;
@@ -613,12 +631,62 @@
         display: none;
     }
 
+    #header.fixed .btn-booking-m {
+        color: #000
+    }
+
     #header .btn-booking-m {
         display: block;
     }
 
     #header .btn-menu .label {
         display: none;
+    }
+
+    .left-menu .link-list a.active:after {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    .left-menu .link-list a {
+        text-align: center;
+        width: fit-content;
+        display: inline-block;
+    }
+
+    .left-menu .link-list a.active:before {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    .left-menu .link-list a:before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 50%;
+        left: 30px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--base-color);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateX(-400%)
+    }
+
+    .left-menu .link-list a:after {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 50%;
+        right: 30px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--base-color);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateX(400%)
     }
 
     .left-menu,
@@ -646,4 +714,5 @@
     .left-menu-second {
         display: none;
     }
+
 }

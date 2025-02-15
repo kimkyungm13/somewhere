@@ -60,25 +60,27 @@ $(function () {
     // })
 
 
-
     // 메뉴 항목에 마우스를 올렸을 때 해당 서브 메뉴 열기
     $('.left-menu .link-list li').mouseenter(function () {
         let menuName = $(this).data('menu');
+        $('.left-menu .link-list li a').removeClass('active');
         $(this).find('a').addClass('active');
         $('.left-menu-second').removeClass('on'); // 기존 열려있는 메뉴 닫기
         $(menuName).addClass('on'); // 해당하는 메뉴 열기
     });
 
-    // 서브 메뉴를 유지하기 위해, .left-menu-second에서도 마우스를 벗어날 때만 닫히게 처리
-    $('.left-menu-second').on('mouseleave', function () {
+    // .left-menu .link-list에서 마우스를 벗어나면 닫기 (단, .left-menu-second에 마우스가 있으면 유지)
+    $('.left-menu .link-list').mouseleave(function () {
+        if (!$('.left-menu-second:hover').length) {
+            $('.left-menu-second').removeClass('on');
+            $('.left-menu .link-list li a').removeClass('active');
+        }
+    });
 
-        setTimeout(function () {
-            // .link-list li와 .left-menu-second 어느 곳에도 마우스가 없는 경우에만 닫기
-            if (!$('.left-menu-second:hover').length) {
-                $('.left-menu-second').removeClass('on');
-                $('.left-menu .link-list li').find('a').removeClass('active');
-            }
-        }, 100); // 약간의 지연시간 추가로 자연스럽게 연결
+    // .left-menu-second에서도 마우스를 벗어나면 닫기
+    $('.left-menu-second').mouseleave(function () {
+        $('.left-menu-second').removeClass('on');
+        $('.left-menu .link-list li a').removeClass('active');
     });
 
 
