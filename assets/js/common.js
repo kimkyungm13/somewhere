@@ -213,7 +213,18 @@ $(function () {
     }).from(".sc-about .txt-area h2", {
         opacity: 0, yPercent: 50,
     })
+    descTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-about .conts-wrap .conts.bottom",
+            start: "top 60%",
+            end: "bottom bottom",
+            markers: true
+        }
+    });
+    descTl.from('.sc-about .txt-area .desc', {
+        opacity: 0, yPercent: 20,
 
+    })
 
 
     withusTl = gsap.timeline({
