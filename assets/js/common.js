@@ -218,7 +218,7 @@ $(function () {
             trigger: ".sc-about .conts-wrap .conts.bottom",
             start: "top 60%",
             end: "bottom bottom",
-            markers: true
+            // markers: true
         }
     });
     descTl.from('.sc-about .txt-area .desc', {
